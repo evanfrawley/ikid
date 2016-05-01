@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a category!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="En2-wF-wbo">
+                                <rect key="frame" x="226" y="289" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="8kR-Er-hVR">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem id="b4n-uh-u6I">
+                                        <connections>
+                                            <action selector="switchViews" destination="BYZ-38-t0r" id="F0J-U6-xdV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AjK-8D-UF1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pun" id="qGn-SR-Bgr">
+                                        <connections>
+                                            <action selector="createJoke:" destination="BYZ-38-t0r" id="eeD-L4-1sj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad" id="y3E-HW-5IK">
+                                        <connections>
+                                            <action selector="createJoke:" destination="BYZ-38-t0r" id="tzt-dp-cTx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Geeky" id="MGG-Pp-rGo">
+                                        <connections>
+                                            <action selector="createJoke:" destination="BYZ-38-t0r" id="n21-3t-jVZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="En2-wF-wbo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3NC-9L-S3A"/>
+                            <constraint firstItem="8kR-Er-hVR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="E9W-mN-BLZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8kR-Er-hVR" secondAttribute="bottom" id="P4S-71-NTL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8kR-Er-hVR" secondAttribute="trailing" constant="-20" id="c0O-js-FoZ"/>
+                            <constraint firstItem="En2-wF-wbo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q6O-uD-nld"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseLabel" destination="En2-wF-wbo" id="zeE-Qv-n0I"/>
+                        <outlet property="toolbarButton" destination="b4n-uh-u6I" id="jOr-wB-Luq"/>
+                        <outlet property="topToolbar" destination="AjK-8D-UF1" id="mYc-5l-JmY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Joke View Controller-->
+        <scene sceneID="3cP-Yi-fP6">
+            <objects>
+                <viewController storyboardIdentifier="Joke" id="ane-FA-hS8" customClass="JokeViewController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KWN-zL-xrA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hxf-fa-2lf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="26J-XC-GKh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE7-s6-NUR">
+                                <rect key="frame" x="122" y="289" width="356" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tE7-s6-NUR" secondAttribute="trailing" constant="20" id="0KZ-66-77T"/>
+                            <constraint firstItem="tE7-s6-NUR" firstAttribute="centerY" secondItem="26J-XC-GKh" secondAttribute="centerY" id="Jm6-0n-gZy"/>
+                            <constraint firstItem="tE7-s6-NUR" firstAttribute="leading" secondItem="26J-XC-GKh" secondAttribute="leadingMargin" constant="20" id="iEC-ls-hgI"/>
+                            <constraint firstItem="tE7-s6-NUR" firstAttribute="centerX" secondItem="26J-XC-GKh" secondAttribute="centerX" id="lhs-Sb-it8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="tE7-s6-NUR" id="q2J-sQ-EUP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgn-lR-2jF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="212"/>
+        </scene>
+        <!--Joke View Controller-->
+        <scene sceneID="Trc-QA-xyq">
+            <objects>
+                <viewController storyboardIdentifier="Punchline" id="ExS-Mo-ghf" customClass="JokeViewController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dx1-QC-j71"/>
+                        <viewControllerLayoutGuide type="bottom" id="ARC-Cj-8J3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wGA-7y-NuP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Second" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-hx-zIt">
+                                <rect key="frame" x="122" y="289" width="356" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6RP-hx-zIt" firstAttribute="leading" secondItem="wGA-7y-NuP" secondAttribute="leadingMargin" constant="20" id="RJf-09-D9d"/>
+                            <constraint firstItem="6RP-hx-zIt" firstAttribute="centerY" secondItem="wGA-7y-NuP" secondAttribute="centerY" id="Wst-CO-DpC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6RP-hx-zIt" secondAttribute="trailing" constant="20" id="u3j-H0-CkS"/>
+                            <constraint firstItem="6RP-hx-zIt" firstAttribute="centerX" secondItem="wGA-7y-NuP" secondAttribute="centerX" id="xv8-S7-CG9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="6RP-hx-zIt" id="T5t-jN-MSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLx-5O-MxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="871"/>
+        </scene>
+    </scenes>
+</document>
